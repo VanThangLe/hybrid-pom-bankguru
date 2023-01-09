@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<suite name="BankGuru" parallel="tests" thread-count="1">
+	<parameter name="url" value="https://demo.guru99.com/v4/" />
+
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ExtentListener" />
+	</listeners>
+
+	<test name="Run on CHROME">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.bankguru.common.Login" />
+		</classes>
+	</test>
+</suite>
