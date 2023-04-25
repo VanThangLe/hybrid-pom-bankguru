@@ -24,7 +24,7 @@ public class Login extends BaseTest {
 	
 	public static Set<Cookie> loginPageCookie;
 	
-	@Parameters({ "browser", "url" })
+	@Parameters({ "browserName", "appUrl" })
 	@BeforeTest
 	public void beforeTest(String browserName, String appUrl) {
 		log.info("Pre-condition - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");

@@ -18,7 +18,7 @@ public class MiniStatement extends BaseTest {
 	LoginPageObject loginPage;
 	HomePageObject homePage;
 
-	@Parameters({ "browser", "url" })
+	@Parameters({ "browserName", "appUrl" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");

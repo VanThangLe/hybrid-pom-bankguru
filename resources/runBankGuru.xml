@@ -1,28 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
-<suite name="BankGuru" parallel="tests" thread-count="1">
-	<parameter name="url" value="https://demo.guru99.com/v4/" />
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "BankGuru" parallel = "tests" thread-count = "1">
+	
+	<parameter name = "appUrl" value = "https://demo.guru99.com/v4/" />
 
 	<listeners>
-		<listener class-name="commons.MethodListener" />
-		<listener class-name="reportConfig.ExtentListener" />
+		<listener class-name = "commons.MethodListener" />
+		<listener class-name = "reportConfig.ExtentListener" />
 	</listeners>
 
-	<test name="Run on CHROME">
-		<parameter name="browser" value="chrome" />
+	<test name = "Run on CHROME">
+		<parameter name = "browserName" value = "chrome" />
 		<classes>
-			<class name="com.bankguru.common.Login" />
-			<class name="com.bankguru.user.NewAccount" />
-			<class name="com.bankguru.user.EditAccount" />
-			<class name="com.bankguru.user.DeleteAccount" />
-			<class name="com.bankguru.user.NewCustomer" />
-			<class name="com.bankguru.user.EditCustomer" />
-			<class name="com.bankguru.user.DeleteCustomer" />
-			<class name="com.bankguru.user.ChangePassword" />
-			<class name="com.bankguru.user.Payment" />
-			<class name="com.bankguru.user.FundTransfer" />
-			<class name="com.bankguru.user.MiniStatement" />
-			<class name="com.bankguru.user.CustomizedStatement" />
+			<class name = "com.bankguru.common.Login" />
+			<class name = "com.bankguru.user.NewAccount" />
+			<class name = "com.bankguru.user.EditAccount" />
+			<class name = "com.bankguru.user.DeleteAccount" />
+			<class name = "com.bankguru.user.NewCustomer" />
+			<class name = "com.bankguru.user.EditCustomer" />
+			<class name = "com.bankguru.user.DeleteCustomer" />
+			<class name = "com.bankguru.user.ChangePassword" />
+			<class name = "com.bankguru.user.Payment" />
+			<class name = "com.bankguru.user.FundTransfer" />
+			<class name = "com.bankguru.user.MiniStatement" />
+			<class name = "com.bankguru.user.CustomizedStatement" />
 		</classes>
 	</test>
+	
 </suite>

@@ -543,11 +543,6 @@ public class BasePage {
 		selectItemInDefaultDropdown(driver, BasePageUI.DROPDOWN_BY_ID, valueItem, dropdownID);
 	}
 	
-	public void selectItemInAssignDropdown(WebDriver driver, String valueItem) {
-		waitForElementClickAble(driver, BasePageUI.ASSIGN_DROPDOWN);
-		selectItemInDefaultDropdown(driver, BasePageUI.ASSIGN_DROPDOWN, valueItem);
-	}
-	
 	public String getSelectedValueInDropdownByID(WebDriver driver, String dropdownID) {
 		waitForElementVisible(driver, BasePageUI.DROPDOWN_BY_ID, dropdownID);
 		return getFirstSelectedItemInDefaultDropdown(driver, BasePageUI.DROPDOWN_BY_ID, dropdownID);
