@@ -6,16 +6,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bankguru.common.Login;
+
 import commons.BaseTest;
-import commons.GlobalConstants;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class DeleteCustomer extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
+	HomePageObject homePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -23,18 +24,42 @@ public class DeleteCustomer extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
-		log.info("Pre-condition: Step 02 - Login with Admin role");
-		dashboardPage = loginPage.loginToSystem(GlobalConstants.PROJECT_ADMIN_EMAIL, GlobalConstants.PROJECT_ADMIN_PASSWORD);
+		
+		log.info("Pre-condition: Step 02 - Set login page cookie");
+		loginPage.setAllCookies(driver, Login.loginPageCookie);
+		loginPage.sleepInSecond(2);
+		loginPage.refreshCurrentPage(driver);
+		
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void FaceReader_01_Add_New_FaceReader() {
+	//Delete customer with customer id cannot be empty
+	public void Delete_Customer_01() {
 		
 	}
 
 	@Test
-	public void FaceReader_02_Edit_FaceReader() {
+	//Delete customer with customer id must be numeric
+	public void Delete_Customer_02() {
+		
+	}
+	
+	@Test
+	//Delete customer with customer id cannot have special character
+	public void Delete_Customer_03() {
+		
+	}
+	
+	@Test
+	//Delete customer with customer id cannot have black space
+	public void Delete_Customer_04() {
+		
+	}
+	
+	@Test
+	//Delete customer with customer id first character cannot be space
+	public void Delete_Customer_05() {
 		
 	}
 

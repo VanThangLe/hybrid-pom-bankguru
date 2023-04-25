@@ -6,16 +6,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bankguru.common.Login;
+
 import commons.BaseTest;
-import commons.GlobalConstants;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class FundTransfer extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
+	HomePageObject homePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -23,28 +24,84 @@ public class FundTransfer extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
-		log.info("Pre-condition: Step 02 - Login with Admin role");
-		dashboardPage = loginPage.loginToSystem(GlobalConstants.PROJECT_ADMIN_EMAIL, GlobalConstants.PROJECT_ADMIN_PASSWORD);
+		
+		log.info("Pre-condition: Step 02 - Set login page cookie");
+		loginPage.setAllCookies(driver, Login.loginPageCookie);
+		loginPage.sleepInSecond(2);
+		loginPage.refreshCurrentPage(driver);
+		
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void Controller_01_Add_New_Controller() {
+	//Fund transfer with bank code cannot be empty
+	public void Fund_Transfer_01() {
 		
 	}
 
 	@Test
-	public void Controller_02_Edit_Controller() {
+	//Fund transfer with bank code cannot have special character
+	public void Fund_Transfer_02() {
 		
 	}
 
 	@Test
-	public void Controller_03_Assign_CardReader() {
+	//Fund transfer with bank code first character cannot have space
+	public void Fund_Transfer_03() {
 		
 	}
 	
 	@Test
-	public void Controller_05_Add_New_DI_Event() {
+	//Fund transfer with payers account number cannot be empty
+	public void Fund_Transfer_04() {
+		
+	}
+	
+	@Test
+	//Fund transfer with payers account number must be numeric
+	public void Fund_Transfer_05() {
+		
+	}
+	
+	@Test
+	//Fund transfer with payers account number must cannot have special character
+	public void Fund_Transfer_06() {
+		
+	}
+	
+	@Test
+	//Fund transfer with payee account number cannot be empty
+	public void Fund_Transfer_07() {
+		
+	}
+	
+	@Test
+	//Fund transfer with payee account number must be numeric
+	public void Fund_Transfer_08() {
+		
+	}
+	
+	@Test
+	//Fund transfer with payee account number cannot have special character
+	public void Fund_Transfer_09() {
+		
+	}
+	
+	@Test
+	//Fund transfer with amount cannot be empty
+	public void Fund_Transfer_10() {
+		
+	}
+	
+	@Test
+	//Fund transfer with amount must be numeric
+	public void Fund_Transfer_11() {
+		
+	}
+	
+	@Test
+	//Fund transfer with amount cannot have special character
+	public void Fund_Transfer_12() {
 		
 	}
 

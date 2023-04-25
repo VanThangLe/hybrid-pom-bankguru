@@ -533,9 +533,9 @@ public class BasePage {
 		sendkeyToElement(driver, BasePageUI.TEXTBOX_BY_ID_NAME, value, textboxIDName);
 	}
 	
-	public String getValueFieldByAttribute(WebDriver driver, String attribute) {
-		waitForElementVisible(driver, BasePageUI.VALUE_FIELD_BY_ATTRIBUTE, attribute);
-		return getElementText(driver, BasePageUI.VALUE_FIELD_BY_ATTRIBUTE, attribute);
+	public String getValueTextByLabel(WebDriver driver, String attribute) {
+		waitForElementVisible(driver, BasePageUI.VALUE_TEXT_BY_LABEL, attribute);
+		return getElementText(driver, BasePageUI.VALUE_TEXT_BY_LABEL, attribute);
 	}
 	
 	public void selectItemInDropdownByID(WebDriver driver, String dropdownID, String valueItem) {
@@ -585,20 +585,5 @@ public class BasePage {
 	
 	public void uploadImage(WebDriver driver, String filePath) {
 		getWebElement(driver, BasePageUI.UPLOAD_FILE).sendKeys(filePath);
-	}
-	
-	public boolean isSuccessMessageDisplayed(WebDriver driver) {
-		waitForElementVisible(driver, BasePageUI.SUCCESS_MESSAGE);
-		return isElementDisplayed(driver, BasePageUI.SUCCESS_MESSAGE);
-	}
-	
-	public boolean isFieldEnabledByID(WebDriver driver, String fieldID) {
-		waitForElementVisible(driver, BasePageUI.ANY_FIELD_BY_ID, fieldID);
-		return isElementEnabled(driver, BasePageUI.ANY_FIELD_BY_ID, fieldID);
-	}
-	
-	public void clickToEditIcon(WebDriver driver) {
-		waitForElementClickAble(driver, BasePageUI.EDIT_ICON);
-		clickToElement(driver, BasePageUI.EDIT_ICON);
 	}
 }

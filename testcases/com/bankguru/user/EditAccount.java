@@ -6,16 +6,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bankguru.common.Login;
+
 import commons.BaseTest;
-import commons.GlobalConstants;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class EditAccount extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
+	HomePageObject  homePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -23,18 +24,48 @@ public class EditAccount extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
-		log.info("Pre-condition: Step 02 - Login with Admin role");
-		dashboardPage = loginPage.loginToSystem(GlobalConstants.PROJECT_ADMIN_EMAIL, GlobalConstants.PROJECT_ADMIN_PASSWORD);
+		
+		log.info("Pre-condition: Step 02 - Set login page cookie");
+		loginPage.setAllCookies(driver, Login.loginPageCookie);
+		loginPage.sleepInSecond(2);
+		loginPage.refreshCurrentPage(driver);
+		
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void Permission_01_Add_New_Permission() {
+	//Edit account with account number cannot be empty
+	public void Edit_Account_01() {
 		
 	}
-
+	
 	@Test
-	public void Permission_02_Edit_Permission() {
+	//Edit account with account number must be numeric
+	public void Edit_Account_02() {
+		
+	}
+	
+	@Test
+	//Edit account with account number cannot have special character
+	public void Edit_Account_03() {
+		
+	}
+	
+	@Test
+	//Edit account with valid account number
+	public void Edit_Account_04() {
+		
+	}
+	
+	@Test
+	//Edit account with account number cannot have blank space
+	public void Edit_Account_05() {
+		
+	}
+	
+	@Test
+	//Edit account with account number first character cannot be space
+	public void Edit_Account_06() {
 		
 	}
 

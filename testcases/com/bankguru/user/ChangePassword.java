@@ -9,16 +9,14 @@ import org.testng.annotations.Test;
 import com.bankguru.common.Login;
 
 import commons.BaseTest;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class ChangePassword extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
-	String userGroupName, userGroupCode;
-	String userGroupNameUpdate, userGroupCodeUpdate;
+	HomePageObject homePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -26,35 +24,48 @@ public class ChangePassword extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
+		
 		log.info("Pre-condition: Step 02 - Set login page cookie");
 		loginPage.setAllCookies(driver, Login.loginPageCookie);
 		loginPage.sleepInSecond(2);
 		loginPage.refreshCurrentPage(driver);
 		
-		userGroupName = "Group 1";
-		userGroupCode = "groupcode1";
-		userGroupNameUpdate = "Group 1 Update";
-		userGroupCodeUpdate = "groupcode1update";
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void UserGroup_01_Add_New_UserGroup() {
-		log.info("UserGroup_01 - Step 01: Open 'Nhóm người dùng' menu");
-		dashboardPage.openMenuPage(driver, "Nhóm người dùng");
+	//Change password with old password cannot be empty
+	public void Change_Password_01() {
 		
 	}
-
+	
 	@Test
-	public void UserGroup_02_Edit_UserGroup() {
-		log.info("UserGroup_02 - Step 01: Click 'Sửa' icon");
+	//Change password with new password cannot be empty
+	public void Change_Password_02() {
 		
 	}
-
+	
 	@Test
-	public void UserGroup_03_Assign_User() {
-		log.info("UserGroup_03 - Step 01: Click 'Gắn Người dùng'");
+	//Change password with new password must have one numeric value
+	public void Change_Password_03() {
 		
+	}
+	
+	@Test
+	//Change password with new password must have one special character
+	public void Change_Password_04() {
+		
+	}
+	
+	@Test
+	//Change password with password cannot have string password or Password
+	public void Change_Password_05() {
+		
+	}
+	
+	@Test
+	//Change password with confirm password and new password must be matched
+	public void Change_Password_06() {
 		
 	}
 

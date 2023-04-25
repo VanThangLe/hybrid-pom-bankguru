@@ -6,16 +6,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bankguru.common.Login;
+
 import commons.BaseTest;
-import commons.GlobalConstants;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class MiniStatement extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
+	HomePageObject homePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -23,23 +24,42 @@ public class MiniStatement extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
-		log.info("Pre-condition: Step 02 - Login with Admin role");
-		dashboardPage = loginPage.loginToSystem(GlobalConstants.PROJECT_ADMIN_EMAIL, GlobalConstants.PROJECT_ADMIN_PASSWORD);
+		
+		log.info("Pre-condition: Step 02 - Set login page cookie");
+		loginPage.setAllCookies(driver, Login.loginPageCookie);
+		loginPage.sleepInSecond(2);
+		loginPage.refreshCurrentPage(driver);
+		
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void UserType_01_Add_New_UserType() {
+	//Mini statement with account number cannot be empty
+	public void Mini_Statement_01() {
 		
 	}
 
 	@Test
-	public void UserType_02_Edit_UserType() {
+	//Mini statement with account number must be numeric
+	public void Mini_Statement_02() {
 		
 	}
 
 	@Test
-	public void UserType_03_Assign_User() {
+	//Mini statement with account number cannot have special character
+	public void Mini_Statement_03() {
+		
+	}
+	
+	@Test
+	//Mini statement with account number cannot have blank space
+	public void Mini_Statement_04() {
+		
+	}
+	
+	@Test
+	//Mini statement with account number first character cannot be space
+	public void Mini_Statement_05() {
 		
 	}
 

@@ -9,16 +9,14 @@ import org.testng.annotations.Test;
 import com.bankguru.common.Login;
 
 import commons.BaseTest;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class CustomizedStatement extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
-	String userGroupName, userGroupCode;
-	String userGroupNameUpdate, userGroupCodeUpdate;
+	HomePageObject homePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -26,32 +24,102 @@ public class CustomizedStatement extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
+		
 		log.info("Pre-condition: Step 02 - Set login page cookie");
 		loginPage.setAllCookies(driver, Login.loginPageCookie);
 		loginPage.sleepInSecond(2);
 		loginPage.refreshCurrentPage(driver);
 		
-		userGroupName = "Group 1";
-		userGroupCode = "groupcode1";
-		userGroupNameUpdate = "Group 1 Update";
-		userGroupCodeUpdate = "groupcode1update";
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void UserGroup_01_Add_New_UserGroup() {
-		log.info("UserGroup_01 - Step 01: Open 'Nhóm người dùng' menu");
-		dashboardPage.openMenuPage(driver, "Nhóm người dùng");
+	//Customized statement with account number cannot be empty
+	public void Customized_Statement_01() {
 		
 	}
 
 	@Test
-	public void UserGroup_02_Edit_UserGroup() {
-	
+	//Customized statement with account number must be numeric
+	public void Customized_Statement_02() {
+		
 	}
 
 	@Test
-	public void UserGroup_03_Assign_User() {
+	//Customized statement with account number cannot have special character
+	public void Customized_Statement_03() {
+		
+	}
+	
+	@Test
+	//Customized statement with account number cannot have blank space
+	public void Customized_Statement_04() {
+		
+	}
+	
+	@Test
+	//Customized statement with account number first character cannot be space
+	public void Customized_Statement_05() {
+		
+	}
+	
+	@Test
+	//Customized statement with amount lower limit cannot be empty
+	public void Customized_Statement_06() {
+		
+	}
+
+	@Test
+	//Customized statement with amount lower limit must be numeric
+	public void Customized_Statement_07() {
+		
+	}
+
+	@Test
+	//Customized statement with amount lower limit cannot have special character
+	public void Customized_Statement_08() {
+		
+	}
+	
+	@Test
+	//Customized statement with amount lower limit cannot have blank space
+	public void Customized_Statement_09() {
+		
+	}
+	
+	@Test
+	//Customized statement with amount lower limit first character cannot be space
+	public void Customized_Statement_10() {
+		
+	}
+	
+	@Test
+	//Customized statement with number of transaction limit cannot be empty
+	public void Customized_Statement_11() {
+		
+	}
+
+	@Test
+	//Customized statement with number of transaction limit must be numeric
+	public void Customized_Statement_12() {
+		
+	}
+
+	@Test
+	//Customized statement with number of transaction limit cannot have special character
+	public void Customized_Statement_13() {
+		
+	}
+	
+	@Test
+	//Customized statement with number of transaction limit cannot have blank space
+	public void Customized_Statement_14() {
+		
+	}
+	
+	@Test
+	//Customized statement with number of transaction limit first character cannot be space
+	public void Customized_Statement_15() {
 		
 	}
 

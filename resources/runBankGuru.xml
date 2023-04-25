@@ -12,6 +12,17 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.bankguru.common.Login" />
+			<class name="com.bankguru.user.NewAccount" />
+			<class name="com.bankguru.user.EditAccount" />
+			<class name="com.bankguru.user.DeleteAccount" />
+			<class name="com.bankguru.user.NewCustomer" />
+			<class name="com.bankguru.user.EditCustomer" />
+			<class name="com.bankguru.user.DeleteCustomer" />
+			<class name="com.bankguru.user.ChangePassword" />
+			<class name="com.bankguru.user.Payment" />
+			<class name="com.bankguru.user.FundTransfer" />
+			<class name="com.bankguru.user.MiniStatement" />
+			<class name="com.bankguru.user.CustomizedStatement" />
 		</classes>
 	</test>
 </suite>

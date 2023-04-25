@@ -6,16 +6,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bankguru.common.Login;
+
 import commons.BaseTest;
-import commons.GlobalConstants;
-import pageObjects.bankguru.DashboardPageObject;
+import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
 public class NewAccount extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
-	DashboardPageObject dashboardPage;
+	HomePageObject homePage;
 
 	@Parameters({ "browserName", "appUrl" })
 	@BeforeClass
@@ -23,23 +24,72 @@ public class NewAccount extends BaseTest {
 		log.info("Pre-condition: Step 01 - Open browser '" + browserName + "'and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
 		loginPage = PageGenerator.getLoginPage(driver);
-
-		log.info("Pre-condition: Step 02 - Login with Admin role");
-		dashboardPage = loginPage.loginToSystem(GlobalConstants.PROJECT_ADMIN_EMAIL, GlobalConstants.PROJECT_ADMIN_PASSWORD);
+		
+		log.info("Pre-condition: Step 02 - Set login page cookie");
+		loginPage.setAllCookies(driver, Login.loginPageCookie);
+		loginPage.sleepInSecond(2);
+		loginPage.refreshCurrentPage(driver);
+		
+		homePage = PageGenerator.getHomePage(driver);
 	}
 
 	@Test
-	public void Card_01_Add_New_Card() {
+	//Add new account with customer id cannot be empty
+	public void New_Account_01() {
 		
 	}
-
+	
 	@Test
-	public void Card_02_Edit_Card() {
+	//Add new account with customer id must be numeric
+	public void New_Account_02() {
 		
 	}
-
+	
 	@Test
-	public void Card_03_Assign_UserGroup() {
+	//Add new account with customer id cannot have special character
+	public void New_Account_03() {
+		
+	}
+	
+	@Test
+	//Add new account with customer id cannot have blank space
+	public void New_Account_04() {
+		
+	}
+	
+	@Test
+	//Add new account with customer id first character cannot be space
+	public void New_Account_05() {
+		
+	}
+	
+	@Test
+	//Add new account with initial deposit cannot be empty
+	public void New_Account_06() {
+		
+	}
+	
+	@Test
+	//Add new account with initial deposit must be numeric
+	public void New_Account_07() {
+		
+	}
+	
+	@Test
+	//Add new account with initial deposit cannot have special character
+	public void New_Account_08() {
+		
+	}
+	
+	@Test
+	//Add new account with initial deposit cannot have blank space
+	public void New_Account_09() {
+		
+	}
+	
+	@Test
+	//Add new account with initial deposit first character cannot be space
+	public void New_Account_10() {
 		
 	}
 
