@@ -33,32 +33,27 @@ public class DeleteAccount extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Delete account with account number cannot be empty
+	@Test(description = "Delete account with account number cannot be empty")
 	public void Delete_Account_01() {
 		
 	}
 	
-	@Test
-	//Delete account with account number must be numeric
+	@Test(description = "Delete account with account number must be numeric")
 	public void Delete_Account_02() {
 		
 	}
 	
-	@Test
-	//Delete account with account number cannot have special character
+	@Test(description = "Delete account with account number cannot have special character")
 	public void Delete_Account_03() {
 		
 	}
 	
-	@Test
-	//Delete account with account number cannot have blank space
+	@Test(description = "Delete account with account number cannot have blank space")
 	public void Delete_Account_04() {
 		
 	}
 	
-	@Test
-	//Delete account with account number first character cannot be space
+	@Test(description = "Delete account with account number first character cannot be space")
 	public void Delete_Account_05() {
 		
 	}

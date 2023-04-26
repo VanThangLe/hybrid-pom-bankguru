@@ -33,32 +33,27 @@ public class DeleteCustomer extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Delete customer with customer id cannot be empty
+	@Test(description = "Delete customer with customer id cannot be empty")
 	public void Delete_Customer_01() {
 		
 	}
 
-	@Test
-	//Delete customer with customer id must be numeric
+	@Test(description = "Delete customer with customer id must be numeric")
 	public void Delete_Customer_02() {
 		
 	}
 	
-	@Test
-	//Delete customer with customer id cannot have special character
+	@Test(description = "Delete customer with customer id cannot have special character")
 	public void Delete_Customer_03() {
 		
 	}
 	
-	@Test
-	//Delete customer with customer id cannot have black space
+	@Test(description = "Delete customer with customer id cannot have black space")
 	public void Delete_Customer_04() {
 		
 	}
 	
-	@Test
-	//Delete customer with customer id first character cannot be space
+	@Test(description = "Delete customer with customer id first character cannot be space")
 	public void Delete_Customer_05() {
 		
 	}

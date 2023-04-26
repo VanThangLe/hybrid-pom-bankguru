@@ -33,92 +33,77 @@ public class CustomizedStatement extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Customized statement with account number cannot be empty
+	@Test(description = "Customized statement with account number cannot be empty")
 	public void Customized_Statement_01() {
 		
 	}
 
-	@Test
-	//Customized statement with account number must be numeric
+	@Test(description = "Customized statement with account number must be numeric")
 	public void Customized_Statement_02() {
 		
 	}
 
-	@Test
-	//Customized statement with account number cannot have special character
+	@Test(description = "Customized statement with account number cannot have special character")
 	public void Customized_Statement_03() {
 		
 	}
 	
-	@Test
-	//Customized statement with account number cannot have blank space
+	@Test(description = "Customized statement with account number cannot have blank space")
 	public void Customized_Statement_04() {
 		
 	}
 	
-	@Test
-	//Customized statement with account number first character cannot be space
+	@Test(description = "Customized statement with account number first character cannot be space")
 	public void Customized_Statement_05() {
 		
 	}
 	
-	@Test
-	//Customized statement with amount lower limit cannot be empty
+	@Test(description = "Customized statement with amount lower limit cannot be empty")
 	public void Customized_Statement_06() {
 		
 	}
 
-	@Test
-	//Customized statement with amount lower limit must be numeric
+	@Test(description = "Customized statement with amount lower limit must be numeric")
 	public void Customized_Statement_07() {
 		
 	}
 
-	@Test
-	//Customized statement with amount lower limit cannot have special character
+	@Test(description = "Customized statement with amount lower limit cannot have special character")
 	public void Customized_Statement_08() {
 		
 	}
 	
-	@Test
-	//Customized statement with amount lower limit cannot have blank space
+	@Test(description = "Customized statement with amount lower limit cannot have blank space")
 	public void Customized_Statement_09() {
 		
 	}
 	
-	@Test
-	//Customized statement with amount lower limit first character cannot be space
+	@Test(description = "Customized statement with amount lower limit first character cannot be space")
 	public void Customized_Statement_10() {
 		
 	}
 	
-	@Test
-	//Customized statement with number of transaction limit cannot be empty
+	@Test(description = "Customized statement with number of transaction limit cannot be empty")
 	public void Customized_Statement_11() {
 		
 	}
 
-	@Test
-	//Customized statement with number of transaction limit must be numeric
+	@Test(description = "Customized statement with number of transaction limit must be numeric")
 	public void Customized_Statement_12() {
 		
 	}
 
-	@Test
-	//Customized statement with number of transaction limit cannot have special character
+	@Test(description = "Customized statement with number of transaction limit cannot have special character")
 	public void Customized_Statement_13() {
 		
 	}
 	
-	@Test
-	//Customized statement with number of transaction limit cannot have blank space
+	@Test(description = "Customized statement with number of transaction limit cannot have blank space")
 	public void Customized_Statement_14() {
 		
 	}
 	
-	@Test
-	//Customized statement with number of transaction limit first character cannot be space
+	@Test(description = "Customized statement with number of transaction limit first character cannot be space")
 	public void Customized_Statement_15() {
 		
 	}

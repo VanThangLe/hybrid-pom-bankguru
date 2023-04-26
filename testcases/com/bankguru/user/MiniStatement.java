@@ -33,32 +33,27 @@ public class MiniStatement extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Mini statement with account number cannot be empty
+	@Test(description = "Mini statement with account number cannot be empty")
 	public void Mini_Statement_01() {
 		
 	}
 
-	@Test
-	//Mini statement with account number must be numeric
+	@Test(description = "Mini statement with account number must be numeric")
 	public void Mini_Statement_02() {
 		
 	}
 
-	@Test
-	//Mini statement with account number cannot have special character
+	@Test(description = "Mini statement with account number cannot have special character")
 	public void Mini_Statement_03() {
 		
 	}
 	
-	@Test
-	//Mini statement with account number cannot have blank space
+	@Test(description = "Mini statement with account number cannot have blank space")
 	public void Mini_Statement_04() {
 		
 	}
 	
-	@Test
-	//Mini statement with account number first character cannot be space
+	@Test(description = "Mini statement with account number first character cannot be space")
 	public void Mini_Statement_05() {
 		
 	}

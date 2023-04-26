@@ -33,122 +33,102 @@ public class EditCustomer extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Edit customer with customer id cannot be empty
+	@Test(description = "Edit customer with customer id cannot be empty")
 	public void Edit_Customer_01() {
 		
 	}
 
-	@Test
-	//Edit customer with customer id must be numeric
+	@Test(description = "Edit customer with customer id must be numeric")
 	public void Edit_Customer_02() {
 		
 	}
 
-	@Test
-	//Edit customer with customer id cannot have special character
+	@Test(description = "Edit customer with customer id cannot have special character")
 	public void Edit_Customer_03() {
 		
 	}
 	
-	@Test
-	//Edit customer with valid customer id
+	@Test(description = "Edit customer with valid customer id")
 	public void Edit_Customer_04() {
 		
 	}
 	
-	@Test
-	//Edit customer with address cannot be empty
+	@Test(description = "Edit customer with address cannot be empty")
 	public void Edit_Customer_05() {
 		
 	}
 	
-	@Test
-	//Edit customer with city cannot be empty
+	@Test(description = "Edit customer with city cannot be empty")
 	public void Edit_Customer_06() {
 		
 	}
 	
-	@Test
-	//Edit customer with city cannot be numeric
+	@Test(description = "Edit customer with city cannot be numeric")
 	public void Edit_Customer_07() {
 		
 	}
 	
-	@Test
-	//Edit customer with city cannot have special character
+	@Test(description = "Edit customer with city cannot have special character")
 	public void Edit_Customer_08() {
 		
 	}
 	
-	@Test
-	//Edit customer with state cannot be empty
+	@Test(description = "Edit customer with state cannot be empty")
 	public void Edit_Customer_09() {
 		
 	}
 	
-	@Test
-	//Edit customer with state cannot be numeric
+	@Test(description = "Edit customer with state cannot be numeric")
 	public void Edit_Customer_10() {
 		
 	}
 	
-	@Test
-	//Edit customer with state cannot have special character
+	@Test(description = "Edit customer with state cannot have special character")
 	public void Edit_Customer_11() {
 		
 	}
 	
-	@Test
-	//Edit customer with pin must be numeric
+	@Test(description = "Edit customer with pin must be numeric")
 	public void Edit_Customer_12() {
 		
 	}
 	
-	@Test
-	//Edit customer with pin must be empty
+	@Test(description = "Edit customer with pin must be empty")
 	public void Edit_Customer_13() {
 		
 	}
 	
-	@Test
-	//Edit customer with pin must have 6 digits
+	@Test(description = "Edit customer with pin must have 6 digits")
 	public void Edit_Customer_14() {
 		
 	}
 	
-	@Test
-	//Edit customer with pin cannot have special character
+	@Test(description = "Edit customer with pin cannot have special character")
 	public void Edit_Customer_15() {
 		
 	}
 	
-	@Test
-	//Edit customer with telephone cannot be empty
+	@Test(description = "Edit customer with telephone cannot be empty")
 	public void Edit_Customer_16() {
 		
 	}
 	
-	@Test
-	//Edit customer with telephone cannot have special character
+	@Test(description = "Edit customer with telephone cannot have special character")
 	public void Edit_Customer_17() {
 		
 	}
 	
-	@Test
-	//Edit customer with email cannot be empty
+	@Test(description = "Edit customer with email cannot be empty")
 	public void Edit_Customer_18() {
 		
 	}
 	
-	@Test
-	//Edit customer with invalid email
+	@Test(description = "Edit customer with invalid email")
 	public void Edit_Customer_19() {
 		
 	}
 	
-	@Test
-	//Edit customer with valid email 
+	@Test(description = "Edit customer with valid email")
 	public void Edit_Customer_20() {
 		
 	}

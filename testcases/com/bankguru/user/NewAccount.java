@@ -33,62 +33,52 @@ public class NewAccount extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Add new account with customer id cannot be empty
+	@Test(description = "Add new account with customer id cannot be empty")
 	public void New_Account_01() {
 		
 	}
 	
-	@Test
-	//Add new account with customer id must be numeric
+	@Test(description = "Add new account with customer id must be numeric")
 	public void New_Account_02() {
 		
 	}
 	
-	@Test
-	//Add new account with customer id cannot have special character
+	@Test(description = "Add new account with customer id cannot have special character")
 	public void New_Account_03() {
 		
 	}
 	
-	@Test
-	//Add new account with customer id cannot have blank space
+	@Test(description = "Add new account with customer id cannot have blank space")
 	public void New_Account_04() {
 		
 	}
 	
-	@Test
-	//Add new account with customer id first character cannot be space
+	@Test(description = "Add new account with customer id first character cannot be space")
 	public void New_Account_05() {
 		
 	}
 	
-	@Test
-	//Add new account with initial deposit cannot be empty
+	@Test(description = "Add new account with initial deposit cannot be empty")
 	public void New_Account_06() {
 		
 	}
 	
-	@Test
-	//Add new account with initial deposit must be numeric
+	@Test(description = "Add new account with initial deposit must be numeric")
 	public void New_Account_07() {
 		
 	}
 	
-	@Test
-	//Add new account with initial deposit cannot have special character
+	@Test(description = "Add new account with initial deposit cannot have special character")
 	public void New_Account_08() {
 		
 	}
 	
-	@Test
-	//Add new account with initial deposit cannot have blank space
+	@Test(description = "Add new account with initial deposit cannot have blank space")
 	public void New_Account_09() {
 		
 	}
 	
-	@Test
-	//Add new account with initial deposit first character cannot be space
+	@Test(description = "Add new account with initial deposit first character cannot be space")
 	public void New_Account_10() {
 		
 	}

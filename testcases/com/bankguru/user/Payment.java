@@ -33,62 +33,52 @@ public class Payment extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Create new customer account and check created successfully
+	@Test(description = "Create new customer account and check created successfully")
 	public void Payment_01() {
 		
 	}
 
-	@Test
-	//Edit customer account and check edited successfully
+	@Test(description = "Edit customer account and check edited successfully")
 	public void Payment_02() {
 		
 	}
 	
-	@Test
-	//Add new account and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal
+	@Test(description = "Add new account and check created successfully, then verify 'Current Amount' and 'Initial Deposit' are equal")
 	public void Payment_03() {
 		
 	}
 	
-	@Test
-	//Edit account anh check type of Account is 'Current'
+	@Test(description = "Edit account anh check type of Account is 'Current'")
 	public void Payment_04() {
 		
 	}
 	
-	@Test
-	//Transfer money into a current account and check account balance equal 55,000
+	@Test(description = "Transfer money into a current account and check account balance equal 55,000")
 	public void Payment_05() {
 		
 	}
 	
-	@Test
-	//Withdraw money from current account and check account balance equal 40,000
+	@Test(description = "Withdraw money from current account and check account balance equal 40,000")
 	public void Payment_06() {
 		
 	}
 	
-	@Test
-	//Transfer the money into another account and check amount equal 10,000
+	@Test(description = "Transfer the money into another account and check amount equal 10,000")
 	public void Payment_07() {
 		
 	}
 	
-	@Test
-	//Check current account balance equal 30,000
+	@Test(description = "Check current account balance equal 30,000")
 	public void Payment_08() {
 		
 	}
 	
-	@Test
-	//Delete all account of this customer account and check deleted successfully
+	@Test(description = "Delete all account of this customer account and check deleted successfully")
 	public void Payment_09() {
 		
 	}
 	
-	@Test
-	//Delete exist customer account and check deleted successfully
+	@Test(description = "Delete exist customer account and check deleted successfully")
 	public void Payment_10() {
 		
 	}

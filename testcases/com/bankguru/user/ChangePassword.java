@@ -33,38 +33,32 @@ public class ChangePassword extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Change password with old password cannot be empty
+	@Test(description = "Change password with old password cannot be empty")
 	public void Change_Password_01() {
 		
 	}
 	
-	@Test
-	//Change password with new password cannot be empty
+	@Test(description = "Change password with new password cannot be empty")
 	public void Change_Password_02() {
 		
 	}
 	
-	@Test
-	//Change password with new password must have one numeric value
+	@Test(description = "Change password with new password must have one numeric value")
 	public void Change_Password_03() {
 		
 	}
 	
-	@Test
-	//Change password with new password must have one special character
+	@Test(description = "Change password with new password must have one special character")
 	public void Change_Password_04() {
 		
 	}
 	
-	@Test
-	//Change password with password cannot have string password or Password
+	@Test(description = "Change password with password cannot have string password or Password")
 	public void Change_Password_05() {
 		
 	}
 	
-	@Test
-	//Change password with confirm password and new password must be matched
+	@Test(description = "Change password with confirm password and new password must be matched")
 	public void Change_Password_06() {
 		
 	}

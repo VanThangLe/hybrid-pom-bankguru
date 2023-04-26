@@ -33,74 +33,63 @@ public class FundTransfer extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Fund transfer with bank code cannot be empty
+	@Test(description = "Fund transfer with bank code cannot be empty")
 	public void Fund_Transfer_01() {
 		
 	}
 
-	@Test
-	//Fund transfer with bank code cannot have special character
+	@Test(description = "Fund transfer with bank code cannot have special character")
 	public void Fund_Transfer_02() {
 		
 	}
 
-	@Test
-	//Fund transfer with bank code first character cannot have space
+	@Test(description = "Fund transfer with bank code first character cannot have space")
 	public void Fund_Transfer_03() {
 		
 	}
 	
-	@Test
-	//Fund transfer with payers account number cannot be empty
+	@Test(description = "Fund transfer with payers account number cannot be empty")
 	public void Fund_Transfer_04() {
 		
 	}
 	
-	@Test
-	//Fund transfer with payers account number must be numeric
+	@Test(description = "Fund transfer with payers account number must be numeric")
 	public void Fund_Transfer_05() {
 		
 	}
 	
-	@Test
-	//Fund transfer with payers account number must cannot have special character
+	@Test(description = "Fund transfer with payers account number must cannot have special character")
 	public void Fund_Transfer_06() {
 		
 	}
 	
-	@Test
-	//Fund transfer with payee account number cannot be empty
+	@Test(description = "Fund transfer with payee account number cannot be empty")
 	public void Fund_Transfer_07() {
 		
 	}
 	
-	@Test
-	//Fund transfer with payee account number must be numeric
+	@Test(description = "Fund transfer with payee account number must be numeric")
 	public void Fund_Transfer_08() {
 		
 	}
 	
-	@Test
-	//Fund transfer with payee account number cannot have special character
+	@Test(description = "Fund transfer with payee account number cannot have special character")
+	//
 	public void Fund_Transfer_09() {
 		
 	}
 	
-	@Test
-	//Fund transfer with amount cannot be empty
+	@Test(description = "Fund transfer with amount cannot be empty")
 	public void Fund_Transfer_10() {
 		
 	}
 	
-	@Test
-	//Fund transfer with amount must be numeric
+	@Test(description = "Fund transfer with amount must be numeric")
 	public void Fund_Transfer_11() {
 		
 	}
 	
-	@Test
-	//Fund transfer with amount cannot have special character
+	@Test(description = "Fund transfer with amount cannot have special character")
 	public void Fund_Transfer_12() {
 		
 	}

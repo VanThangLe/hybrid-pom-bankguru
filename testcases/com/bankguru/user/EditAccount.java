@@ -33,38 +33,32 @@ public class EditAccount extends BaseTest {
 		homePage = PageGenerator.getHomePage(driver);
 	}
 
-	@Test
-	//Edit account with account number cannot be empty
+	@Test(description = "Edit account with account number cannot be empty")
 	public void Edit_Account_01() {
 		
 	}
 	
-	@Test
-	//Edit account with account number must be numeric
+	@Test(description = "Edit account with account number must be numeric")
 	public void Edit_Account_02() {
 		
 	}
 	
-	@Test
-	//Edit account with account number cannot have special character
+	@Test(description = "Edit account with account number cannot have special character")
 	public void Edit_Account_03() {
 		
 	}
 	
-	@Test
-	//Edit account with valid account number
+	@Test(description = "Edit account with valid account number")
 	public void Edit_Account_04() {
 		
 	}
 	
-	@Test
-	//Edit account with account number cannot have blank space
+	@Test(description = "Edit account with account number cannot have blank space")
 	public void Edit_Account_05() {
 		
 	}
 	
-	@Test
-	//Edit account with account number first character cannot be space
+	@Test(description = "Edit account with account number first character cannot be space")
 	public void Edit_Account_06() {
 		
 	}
