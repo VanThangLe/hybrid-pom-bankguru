@@ -533,9 +533,14 @@ public class BasePage {
 		sendkeyToElement(driver, BasePageUI.TEXTBOX_BY_ID_NAME, value, textboxIDName);
 	}
 	
-	public String getValueTextByLabel(WebDriver driver, String attribute) {
-		waitForElementVisible(driver, BasePageUI.VALUE_TEXT_BY_LABEL, attribute);
-		return getElementText(driver, BasePageUI.VALUE_TEXT_BY_LABEL, attribute);
+	public String getTextByIDName(WebDriver driver, String attribute) {
+		waitForElementVisible(driver, BasePageUI.TEXTBOX_VALUE_BY_ID_NAME, attribute);
+		return getElementText(driver, BasePageUI.TEXTBOX_VALUE_BY_ID_NAME, attribute);
+	}
+	
+	public String getErrorMessageByIDLabel(WebDriver driver, String attribute) {
+		waitForElementVisible(driver, BasePageUI.ERROR_MESSAGE_BY_LABEL, attribute);
+		return getElementText(driver, BasePageUI.ERROR_MESSAGE_BY_LABEL, attribute);
 	}
 	
 	public void selectItemInDropdownByID(WebDriver driver, String dropdownID, String valueItem) {

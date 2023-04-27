@@ -3,6 +3,7 @@ encoding//actions/commons/BasePage.java=UTF-8
 encoding//actions/commons/BaseTest.java=UTF-8
 encoding//actions/pageObjects/bankguru/HomePageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/LoginPageObject.java=UTF-8
+encoding//actions/pageObjects/bankguru/NewCustomerPageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/PageGenerator.java=UTF-8
 encoding//actions/pageObjects/bankguru/RegisterPageObject.java=UTF-8
 encoding//interfaces/pageUIs/bankguru/BasePageUI.java=UTF-8

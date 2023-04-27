@@ -40,8 +40,8 @@ public class Login extends BaseTest {
 		registerPage.clickToButtonByIDName(driver, "btnLogin");
 		
 		log.info("Pre-condition - Get value of userID and password");
-		userID = registerPage.getValueTextByLabel(driver, "User ID :");
-		password = registerPage.getValueTextByLabel(driver, "Password :");
+		userID = registerPage.getTextByIDName(driver, "User ID :");
+		password = registerPage.getTextByIDName(driver, "Password :");
 		
 		log.info("Pre-condition - Direct to login page");
 		registerPage.openPageUrl(driver, GlobalConstants.LOGIN_LINK);

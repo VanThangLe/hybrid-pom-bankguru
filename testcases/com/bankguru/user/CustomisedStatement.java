@@ -13,7 +13,7 @@ import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
 
-public class CustomizedStatement extends BaseTest {
+public class CustomisedStatement extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
 	HomePageObject homePage;
