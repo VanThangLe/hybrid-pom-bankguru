@@ -453,25 +453,40 @@ public class NewCustomer extends BaseTest {
 		log.info("New_Customer_26 - Step 11: Verify error message");
 		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message9"), "Email-ID is not valid");
 	}
-	
-	@Test(description = "Add new customer with email cannot have space")
+	 
+	@Test(description = "Add new customer with check all Fields name (label) are as requirement")
 	public void New_Customer_27() {
 		log.info("New_Customer_27 - Step 01: Refresh 'New Customer' page");
 		newCustomerPage.refreshCurrentPage(driver);
+	 
+		log.info("New_Customer_27 - Step 02: Click to 'Submit' button");
+		newCustomerPage.clickToButtonByIDName(driver, "sub");
 		
-		
-		
+		log.info("New_Customer_27 - Step 03: Verify error message");
+		verifyEquals(newCustomerPage.getTextInAlert(driver), "please fill all fields");
 	}
-
-	@Test(description = "Add new customer with check all Fields name (label) are as requirement")
+	
+	@Test(description = "Add new customer success")
 	public void New_Customer_28() {
 		log.info("New_Customer_28 - Step 01: Refresh 'New Customer' page");
 		newCustomerPage.refreshCurrentPage(driver);
 		
-		log.info("New_Customer_28 - Step 02: Click to 'Submit' button");
+		log.info("New_Customer_28 - Step 02: Sendkey to all fields");
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.clickToCheckboxByLabel(driver, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		
+		log.info("New_Customer_28 - Step 03: Click to 'Submit' button");
 		newCustomerPage.clickToButtonByIDName(driver, "sub");
 		
-		
+		log.info("New_Customer_28 - Step 04: ");
 	}
 
 	@Parameters({ "browser" })

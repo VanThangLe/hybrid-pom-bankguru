@@ -88,7 +88,7 @@ public class BasePage {
 		alert.sendKeys(value);
 	}
 	
-	public String getTextInAlert(WebDriver driver, String value) {
+	public String getTextInAlert(WebDriver driver) {
 		alert = waitForAlertPresence(driver);
 		return alert.getText();
 	}

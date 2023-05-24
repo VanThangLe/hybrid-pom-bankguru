@@ -18,4 +18,8 @@ public class PageGenerator {
 	public static NewCustomerPageObject getNewCustomerPage(WebDriver driver) {
 		return new NewCustomerPageObject(driver);
 	}
+	
+	public static EditCustomerPageObject getEditCustomerPage(WebDriver driver) {
+		return new EditCustomerPageObject(driver);
+	}
 }

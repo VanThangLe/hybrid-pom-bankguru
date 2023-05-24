@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//actions/commons/BasePage.java=UTF-8
 encoding//actions/commons/BaseTest.java=UTF-8
+encoding//actions/pageObjects/bankguru/EditCustomerPageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/HomePageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/LoginPageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/NewCustomerPageObject.java=UTF-8
