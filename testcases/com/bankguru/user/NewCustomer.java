@@ -20,6 +20,7 @@ public class NewCustomer extends BaseTest {
 	LoginPageObject loginPage;
 	HomePageObject homePage;
 	NewCustomerPageObject newCustomerPage;
+	public static String customerID;
 
 	@Parameters({ "browserName", "appUrl" })
 	@BeforeClass
@@ -472,21 +473,31 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.refreshCurrentPage(driver);
 		
 		log.info("New_Customer_28 - Step 02: Sendkey to all fields");
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.clickToCheckboxByLabel(driver, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
-		newCustomerPage.enterToTextboxByIDName(driver, null, null);
+		newCustomerPage.enterToTextboxByIDName(driver, "name", "Thang");
+		newCustomerPage.clickToCheckboxByNameValue(driver, "rad1", "m");
+		newCustomerPage.enterToTextboxByIDName(driver, "dob", "07/07/1996");
+		newCustomerPage.enterToTextboxByIDName(driver, "addr", "HaNoi");
+		newCustomerPage.enterToTextboxByIDName(driver, "city", "HaNoi");
+		newCustomerPage.enterToTextboxByIDName(driver, "state", "HaNoi");
+		newCustomerPage.enterToTextboxByIDName(driver, "pinno", "100000");
+		newCustomerPage.enterToTextboxByIDName(driver, "telephoneno", "0987654321");
+		newCustomerPage.enterToTextboxByIDName(driver, "emailid", "thang.le.fc@gmail.com");
+		newCustomerPage.enterToTextboxByIDName(driver, "password", "12345678");
 		
 		log.info("New_Customer_28 - Step 03: Click to 'Submit' button");
 		newCustomerPage.clickToButtonByIDName(driver, "sub");
 		
-		log.info("New_Customer_28 - Step 04: ");
+		log.info("New_Customer_28 - Step 04: Verify data value");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Customer Name"), "Thang");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Gender"), "male");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Birthdate"), "1996-07-07");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Address"), "HaNoi");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "City"), "HaNoi");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "State"), "HaNoi");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Pin"), "100000");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Mobile No."), "0987654321");
+		verifyEquals(newCustomerPage.getTextByIDName(driver, "Email"), "thang.le.fc@gmail.com");
+		customerID = newCustomerPage.getTextByIDName(driver, "Customer ID");
 	}
 
 	@Parameters({ "browser" })

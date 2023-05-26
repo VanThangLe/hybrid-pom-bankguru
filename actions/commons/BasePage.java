@@ -553,14 +553,14 @@ public class BasePage {
 		return getFirstSelectedItemInDefaultDropdown(driver, BasePageUI.DROPDOWN_BY_ID, dropdownID);
 	}
 	
-	public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName) {
-		waitForElementClickAble(driver, BasePageUI.CHECKBOX_BY_LABEL, checkboxLabelName);
-		checkToCheckboxOrRadio(driver, BasePageUI.CHECKBOX_BY_LABEL, checkboxLabelName);
+	public void clickToCheckboxByNameValue(WebDriver driver, String checkboxName, String checkboxValue) {
+		waitForElementClickAble(driver, BasePageUI.CHECKBOX_BY_NAME_VALUE, checkboxName, checkboxValue);
+		checkToCheckboxOrRadio(driver, BasePageUI.CHECKBOX_BY_NAME_VALUE, checkboxName, checkboxValue);
 	}
 	
-	public boolean isCheckboxButtonSelectedByLabel(WebDriver driver, String checkboxLabelName) {
-		waitForElementVisible(driver, BasePageUI.CHECKBOX_BY_LABEL, checkboxLabelName);
-		return isElementSelected(driver, BasePageUI.CHECKBOX_BY_LABEL, checkboxLabelName);
+	public boolean isCheckboxButtonSelectedByLabel(WebDriver driver, String checkboxLabelName, String checkboxValue) {
+		waitForElementVisible(driver, BasePageUI.CHECKBOX_BY_NAME_VALUE, checkboxLabelName, checkboxValue);
+		return isElementSelected(driver, BasePageUI.CHECKBOX_BY_NAME_VALUE, checkboxLabelName, checkboxValue);
 	}
 	
 	public void clickToRadioByLabel(WebDriver driver, String radioLabelName) {
