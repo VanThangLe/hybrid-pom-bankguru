@@ -22,4 +22,8 @@ public class PageGenerator {
 	public static EditCustomerPageObject getEditCustomerPage(WebDriver driver) {
 		return new EditCustomerPageObject(driver);
 	}
+	
+	public static DeleteCustomerPageObject getDeleteCustomerPage(WebDriver driver) {
+		return new DeleteCustomerPageObject(driver);
+	}
 }
