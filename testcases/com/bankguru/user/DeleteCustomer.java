@@ -54,7 +54,7 @@ public class DeleteCustomer extends BaseTest {
 
 	@Test(description = "Delete customer with customer id must be numeric")
 	public void Delete_Customer_02() {
-		log.info("Delete_Customer_02 - Step 01: Refresh 'Edit Customer' page");
+		log.info("Delete_Customer_02 - Step 01: Refresh 'Delete Customer' page");
 		deleteCustomerPage.refreshCurrentPage(driver);
 		
 		log.info("Delete_Customer_02 - Step 02: Sendkey to 'Customer ID' field");
@@ -72,7 +72,7 @@ public class DeleteCustomer extends BaseTest {
 	
 	@Test(description = "Delete customer with customer id cannot have special character")
 	public void Delete_Customer_03() {
-		log.info("Delete_Customer_03 - Step 01: Refresh 'Edit Customer' page");
+		log.info("Delete_Customer_03 - Step 01: Refresh 'Delete Customer' page");
 		deleteCustomerPage.refreshCurrentPage(driver);
 		
 		log.info("Delete_Customer_03 - Step 02: Sendkey to 'Customer ID' field");
@@ -90,7 +90,7 @@ public class DeleteCustomer extends BaseTest {
 	
 	@Test(description = "Delete customer with customer id cannot have black space")
 	public void Delete_Customer_04() {
-		log.info("Delete_Customer_04 - Step 01: Refresh 'Edit Customer' page");
+		log.info("Delete_Customer_04 - Step 01: Refresh 'Delete Customer' page");
 		deleteCustomerPage.refreshCurrentPage(driver);
 		
 		log.info("Delete_Customer_04 - Step 02: Sendkey to 'Customer ID' field");
@@ -102,13 +102,16 @@ public class DeleteCustomer extends BaseTest {
 	
 	@Test(description = "Delete customer with customer id first character cannot be space")
 	public void Delete_Customer_05() {
-		log.info("Delete_Customer_05 - Step 01: Refresh 'Edit Customer' page");
+		log.info("Delete_Customer_05 - Step 01: Refresh 'Delete Customer' page");
 		deleteCustomerPage.refreshCurrentPage(driver);
 		
 		log.info("Delete_Customer_05 - Step 02: Sendkey to 'Customer ID' field");
 		deleteCustomerPage.enterToTextboxByIDName(driver, "cusid", " 55143");
 		
-		log.info("Delete_Customer_05 - Step 03: Verify error message");
+		log.info("Delete_Customer_05 - Step 03: Click 'Tab'");
+		deleteCustomerPage.sendkeyBoardToElement(driver, "cusid", Keys.TAB);
+		
+		log.info("Delete_Customer_05 - Step 04: Verify error message");
 		verifyEquals(deleteCustomerPage.getErrorMessageByIDLabel(driver, "message14"), "First character can not have space");
 	}
 
