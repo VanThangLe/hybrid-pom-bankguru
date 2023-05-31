@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//actions/commons/BasePage.java=UTF-8
 encoding//actions/commons/BaseTest.java=UTF-8
+encoding//actions/pageObjects/bankguru/ChangePasswordPageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/DeleteAccountPageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/DeleteCustomerPageObject.java=UTF-8
 encoding//actions/pageObjects/bankguru/EditAccountPageObject.java=UTF-8

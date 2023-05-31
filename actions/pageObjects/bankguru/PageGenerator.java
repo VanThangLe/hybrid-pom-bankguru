@@ -38,4 +38,8 @@ public class PageGenerator {
 	public static DeleteAccountPageObject getDeleteAccountPage(WebDriver driver) {
 		return new DeleteAccountPageObject(driver);
 	}
+	
+	public static ChangePasswordPageObject getChangePasswordPage(WebDriver driver) {
+		return new ChangePasswordPageObject(driver);
+	}
 }
