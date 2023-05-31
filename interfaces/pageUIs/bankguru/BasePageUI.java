@@ -12,5 +12,6 @@ public class BasePageUI {
 	public static final String TABLE_LIST_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX = "//tr['%s']/td['%s']";
 	public static final String TABLE_ASSIGN_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX = "//div[@dusk='%s']//tr['%s']/td['%s']";
 	public static final String MENU_BY_PAGE_NAME = "//a[contains(text(),'%s')]";
-	public static final String UPLOAD_FILE = "//input[@type='file']"; 
+	public static final String UPLOAD_FILE = "//input[@type='file']";
+	public static final String TITLE_TEXT = "//p[contains(text(),'%s')]";
 }

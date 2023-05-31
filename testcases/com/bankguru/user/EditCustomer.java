@@ -100,7 +100,7 @@ public class EditCustomer extends BaseTest {
 		editCustomerPage.clickToButtonByIDName(driver, "AccSubmit");
 		
 		log.info("Edit_Customer_04 - Step 04: Verify error message");
-		verifyTrue(editCustomerPage.isEditCustomerPageDisplayed("Edit Customer"));
+		verifyTrue(editCustomerPage.isEditCustomerPageDisplayed(driver, "Edit Customer"));
 	}
 	
 	@Test(description = "Edit customer with address cannot be empty")

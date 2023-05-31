@@ -586,4 +586,9 @@ public class BasePage {
 	public void uploadImage(WebDriver driver, String filePath) {
 		getWebElement(driver, BasePageUI.UPLOAD_FILE).sendKeys(filePath);
 	}
+	
+	public boolean isEditCustomerPageDisplayed(WebDriver driver, String value) {
+		waitForElementVisible(driver, BasePageUI.TITLE_TEXT, value);
+		return isElementDisplayed(driver, BasePageUI.TITLE_TEXT, value);
+	}
 }
