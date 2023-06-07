@@ -49,7 +49,7 @@ public class MiniStatement extends BaseTest {
 		miniStatementPage.sendkeyBoardToElement(driver, "accountno", Keys.TAB);
 		
 		log.info("Mini_Statement_01 - Step 04: Verify error message");
-		verifyEquals(miniStatementPage.getErrorMessageByIDLabel(driver, "message2"), "Account Number is required");
+		verifyEquals(miniStatementPage.getErrorMessageByIDLabel(driver, "message2"), "Account Number must not be blank");
 	}
 
 	@Test(description = "Mini statement with account number must be numeric")

@@ -49,7 +49,7 @@ public class DeleteAccount extends BaseTest {
 		deleteAccountPage.sendkeyBoardToElement(driver, "accountno", Keys.TAB);
 		
 		log.info("Delete_Account_01 - Step 04: Verify error message");
-		verifyEquals(deleteAccountPage.getErrorMessageByIDLabel(driver, "message2"), "Account Number is required");
+		verifyEquals(deleteAccountPage.getErrorMessageByIDLabel(driver, "message2"), "Account Number must not be blank");
 	}
 	
 	@Test(description = "Delete account with account number must be numeric")

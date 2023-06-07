@@ -98,7 +98,7 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.enterToTextboxByIDName(driver, "name", " Raul Garcia");
 		
 		log.info("New_Customer_04 - Step 03: Verify error message");
-		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message"), "First character cannot be space");
+		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message"), "First character can not have space");
 	}
 
 	@Test(description = "Add new customer with address cannot be empty")
@@ -125,7 +125,7 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.enterToTextboxByIDName(driver, "addr", " Vine St");
 		
 		log.info("New_Customer_06 - Step 03: Verify error message");
-		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message3"), "First character cannot be space");
+		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message3"), "First character can not have space");
 	}
 	
 	@Test(description = "Add new customer with city cannot be empty")
@@ -188,7 +188,7 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.enterToTextboxByIDName(driver, "city", " Cincinnati");
 		
 		log.info("New_Customer_10 - Step 03: Verify error message");
-		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message4"), "First character cannot be space");
+		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message4"), "First character can not have space");
 	}
 	
 	@Test(description = "Add new customer with state cannot be empty")
@@ -251,7 +251,7 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.enterToTextboxByIDName(driver, "state", " Ohio");
 		
 		log.info("New_Customer_14 - Step 03: Verify error message");
-		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message5"), "First character cannot be space");
+		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message5"), "First character can not have space");
 	}
 	
 	@Test(description = "Add new customer with pin must be numeric")
@@ -326,7 +326,7 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.enterToTextboxByIDName(driver, "pinno", " 45874");
 		
 		log.info("New_Customer_19 - Step 03: Verify error message");
-		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message6"), "First character cannot be space");
+		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message6"), "First character can not have space");
 	}
 
 	@Test(description = "Add new customer with pin cannot have blank space")
@@ -365,7 +365,7 @@ public class NewCustomer extends BaseTest {
 		newCustomerPage.enterToTextboxByIDName(driver, "telephoneno", " 09876543210000");
 		
 		log.info("New_Customer_22 - Step 03: Verify error message");
-		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message7"), "First character cannot be space");
+		verifyEquals(newCustomerPage.getErrorMessageByIDLabel(driver, "message7"), "First character can not have space");
 	}
 	
 	@Test(description = "Add new customer with telephone cannot have spaces")

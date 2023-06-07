@@ -49,7 +49,7 @@ public class EditAccount extends BaseTest {
 		editAccountPage.sendkeyBoardToElement(driver, "accountno", Keys.TAB);
 		
 		log.info("Edit_Account_01 - Step 04: Verify error message");
-		verifyEquals(editAccountPage.getErrorMessageByIDLabel(driver, "message2"), "Account Number is required");
+		verifyEquals(editAccountPage.getErrorMessageByIDLabel(driver, "message2"), "Account Number must not be blank");
 	}
 	
 	@Test(description = "Edit account with account number must be numeric")
