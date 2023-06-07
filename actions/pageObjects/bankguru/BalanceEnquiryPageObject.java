@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 
-public class PaymentPageObject extends BasePage {
+public class BalanceEnquiryPageObject extends BasePage {
 	//private WebDriver driver;
 	
-	public PaymentPageObject(WebDriver _driver) {
+	public BalanceEnquiryPageObject(WebDriver _driver) {
 		//this.driver = _driver;
 	}
 }
