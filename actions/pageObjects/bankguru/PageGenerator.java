@@ -55,7 +55,11 @@ public class PageGenerator {
 		return new CustomizedStatementPageObject(driver);
 	}
 	
-	public static BalanceEnquiryPageObject getPaymentPage(WebDriver driver) {
+	public static BalanceEnquiryPageObject getBalanceEnquiryPage(WebDriver driver) {
 		return new BalanceEnquiryPageObject(driver);
+	}
+	
+	public static DepositPageObject getDepositPage(WebDriver driver) {
+		return new DepositPageObject(driver);
 	}
 }
