@@ -99,7 +99,7 @@ public class EditCustomer extends BaseTest {
 		log.info("Edit_Customer_04 - Step 03: Click to 'Submit' button");
 		editCustomerPage.clickToButtonByIDName(driver, "AccSubmit");
 		
-		log.info("Edit_Customer_04 - Step 04: Verify error message");
+		log.info("Edit_Customer_04 - Step 04: Verify title display");
 		verifyTrue(editCustomerPage.isEditCustomerPageDisplayed(driver, "Edit Customer"));
 	}
 	
