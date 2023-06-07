@@ -42,4 +42,20 @@ public class PageGenerator {
 	public static ChangePasswordPageObject getChangePasswordPage(WebDriver driver) {
 		return new ChangePasswordPageObject(driver);
 	}
+	
+	public static MiniStatementPageObject getMiniStatementPage(WebDriver driver) {
+		return new MiniStatementPageObject(driver);
+	}
+	
+	public static FundTransferPageObject getFundTransferPage(WebDriver driver) {
+		return new FundTransferPageObject(driver);
+	}
+	
+	public static CustomizedStatementPageObject getCustomizedStatementPage(WebDriver driver) {
+		return new CustomizedStatementPageObject(driver);
+	}
+	
+	public static PaymentPageObject getPaymentPage(WebDriver driver) {
+		return new PaymentPageObject(driver);
+	}
 }
