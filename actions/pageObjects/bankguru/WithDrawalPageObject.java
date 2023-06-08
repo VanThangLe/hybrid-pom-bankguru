@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 
-public class CustomizedStatementPageObject extends BasePage {
+public class WithDrawalPageObject extends BasePage {
 	//private WebDriver driver;
 	
-	public CustomizedStatementPageObject(WebDriver _driver) {
+	public WithDrawalPageObject(WebDriver _driver) {
 		//this.driver = _driver;
 	}
 }

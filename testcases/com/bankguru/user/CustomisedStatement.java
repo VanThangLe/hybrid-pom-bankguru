@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.bankguru.common.Login;
 
 import commons.BaseTest;
-import pageObjects.bankguru.CustomizedStatementPageObject;
+import pageObjects.bankguru.CustomisedStatementPageObject;
 import pageObjects.bankguru.HomePageObject;
 import pageObjects.bankguru.LoginPageObject;
 import pageObjects.bankguru.PageGenerator;
@@ -19,7 +19,7 @@ public class CustomisedStatement extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
 	HomePageObject homePage;
-	CustomizedStatementPageObject customizedStatementPage;
+	CustomisedStatementPageObject customizedStatementPage;
 
 	@Parameters({ "browserName", "appUrl" })
 	@BeforeClass

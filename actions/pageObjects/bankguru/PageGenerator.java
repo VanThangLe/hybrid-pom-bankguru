@@ -51,15 +51,11 @@ public class PageGenerator {
 		return new FundTransferPageObject(driver);
 	}
 	
-	public static CustomizedStatementPageObject getCustomizedStatementPage(WebDriver driver) {
-		return new CustomizedStatementPageObject(driver);
+	public static CustomisedStatementPageObject getCustomizedStatementPage(WebDriver driver) {
+		return new CustomisedStatementPageObject(driver);
 	}
 	
-	public static BalanceEnquiryPageObject getBalanceEnquiryPage(WebDriver driver) {
-		return new BalanceEnquiryPageObject(driver);
-	}
-	
-	public static DepositPageObject getDepositPage(WebDriver driver) {
-		return new DepositPageObject(driver);
+	public static WithDrawalPageObject getWithDrawalPage(WebDriver driver) {
+		return new WithDrawalPageObject(driver);
 	}
 }

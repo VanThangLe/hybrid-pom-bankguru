@@ -587,7 +587,7 @@ public class BasePage {
 		getWebElement(driver, BasePageUI.UPLOAD_FILE).sendKeys(filePath);
 	}
 	
-	public boolean isEditCustomerPageDisplayed(WebDriver driver, String value) {
+	public boolean isTitleTextPageDisplayed(WebDriver driver, String value) {
 		waitForElementVisible(driver, BasePageUI.TITLE_TEXT, value);
 		return isElementDisplayed(driver, BasePageUI.TITLE_TEXT, value);
 	}

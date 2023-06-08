@@ -100,7 +100,7 @@ public class EditAccount extends BaseTest {
 		editAccountPage.clickToButtonByIDName(driver, "AccSubmit");
 		
 		log.info("Edit_Account_04 - Step 04: Verify title display");
-		verifyTrue(editAccountPage.isEditCustomerPageDisplayed(driver, "Edit Account"));
+		verifyTrue(editAccountPage.isTitleTextPageDisplayed(driver, "Edit Account"));
 	}
 	
 	@Test(description = "Edit account with account number cannot have blank space")
