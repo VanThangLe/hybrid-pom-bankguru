@@ -29,8 +29,8 @@ public class ExtentListener implements IReporter {
 		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "/ExtentReportV4/ExtentReport.html");
 		htmlReport.config().setTheme(Theme.DARK);
 		htmlReport.config().enableTimeline(true);
-		htmlReport.config().setDocumentTitle("AccessControl HTML Report");
-		htmlReport.config().setReportName("AccessControl HTML Report");
+		htmlReport.config().setDocumentTitle("BankGuru HTML Report");
+		htmlReport.config().setReportName("BankGuru HTML Report");
 		htmlReport.config().setEncoding("utf-8");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReport);
